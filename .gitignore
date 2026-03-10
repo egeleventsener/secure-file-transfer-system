@@ -1,0 +1,14 @@
+# VS Code settings
+.vscode/
+
+# compiled binaries
+server
+client
+server_ssh
+
+# object files
+*.o
+
+# SSH keys
+keys/*
+!keys/.gitkeep
