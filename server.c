@@ -576,10 +576,10 @@ int main(void) {
     ssh_bind_options_set(sb, SSH_BIND_OPTIONS_BINDPORT, &port);
     
     /* Try to load host keys - graceful fallback if not available */
-    if (ssh_bind_options_set(sb, SSH_BIND_OPTIONS_RSAKEY, "/etc/ssh/ssh_host_rsa_key") != SSH_OK) {
+    /*if (ssh_bind_options_set(sb, SSH_BIND_OPTIONS_RSAKEY, "./keys/ssh_host_rsa_key") != SSH_OK) {
         printf("Warning: Could not load RSA host key\n");
-    }
-    if (ssh_bind_options_set(sb, SSH_BIND_OPTIONS_ECDSAKEY, "/etc/ssh/ssh_host_ecdsa_key") != SSH_OK) {
+    }*/
+    if (ssh_bind_options_set(sb, SSH_BIND_OPTIONS_ECDSAKEY, "./keys/ssh_host_ecdsa_key") != SSH_OK) {
         printf("Warning: Could not load ECDSA host key\n");
     }
 
